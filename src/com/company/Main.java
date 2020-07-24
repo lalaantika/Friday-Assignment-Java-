@@ -9,6 +9,9 @@ class Employee {
     public Employee(String f, String l, double sal) {
         Firstname =f;
         Lastname =l;
+        if (sal<0){
+            monthlySalary=0;
+        }else
         monthlySalary=sal;
     }
 
@@ -46,14 +49,15 @@ class Employee {
         String LastName = sc.next();
         System.out.println("Enter the Salary: ");
         double Salary = sc.nextDouble();
-        Employee e = new Employee(FirstName,LastName,Salary);
 
+        Employee e = new Employee(FirstName,LastName,Salary);
         System.out.println("Yearly salary of "+ e.getFirstName()+" "+e.getLastName()+" :");
         System.out.println(e.getMonthlySalary()*12);
 
         double newsalary=e.getMonthlySalary()*0.1+e.getMonthlySalary();
         e.setMonthlySalary(newsalary);
-        System.out.println("the new yearly salary of "+e.getFirstName()+" "+e.getLastName()+" :");
-        System.out.println(e.getMonthlySalary()*12);e.getMonthlySalary();
+        System.out.println("New yearly salary of "+e.getFirstName()+" "+e.getLastName()+" :");
+        System.out.println(e.getMonthlySalary()*12);
+        e.getMonthlySalary();
     }
 }
