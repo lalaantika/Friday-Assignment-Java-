@@ -7,10 +7,10 @@ public class Book {
     long ISBN;
 
     public Book(String name, long isbn, String author, String publisher){
-        Bookname=name;
-        ISBN =isbn;
-        Authorname =author;
-        Publisher = publisher;
+        this.Bookname=name;
+        this.ISBN =isbn;
+        this.Authorname =author;
+        this.Publisher = publisher;
     }
 
     public String getBookname(){
